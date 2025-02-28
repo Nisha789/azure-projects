@@ -1,0 +1,136 @@
+{
+	"name": "airlinePipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "FindDailyFlightsFile",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "DailyFlightsData",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"exists"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			},
+			{
+				"name": "CheckExistence",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "FindDailyFlightsFile",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@activity('FindDailyFlightsFile').output.exists",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "PrintDoesNotExists",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "FalseParam",
+								"value": {
+									"value": "@activity('FindDailyFlightsFile').output.exists",
+									"type": "Expression"
+								}
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "PrintExists",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "TrueParam",
+								"value": {
+									"value": "@activity('FindDailyFlightsFile').output.exists",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "DataTransformation",
+							"type": "ExecuteDataFlow",
+							"dependsOn": [
+								{
+									"activity": "PrintExists",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"dataflow": {
+									"referenceName": "AirlineDataTransformation",
+									"type": "DataFlowReference"
+								},
+								"compute": {
+									"coreCount": 8,
+									"computeType": "General"
+								},
+								"traceLevel": "Fine"
+							}
+						}
+					]
+				}
+			}
+		],
+		"variables": {
+			"FalseParam": {
+				"type": "Boolean"
+			},
+			"TrueParam": {
+				"type": "Boolean"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-02-28T11:03:54Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

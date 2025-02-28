@@ -1,0 +1,9 @@
+{
+	"name": "airlinesadfdev",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "831c030e-01d1-421a-bb08-30c2371eb4b2",
+		"tenantId": "c161cbdf-f35c-45b7-a6a7-5d55b622ee4d"
+	}
+}
