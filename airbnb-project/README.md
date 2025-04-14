@@ -202,7 +202,7 @@ Special thanks to the Azure team for providing the **Data Factory**, **Cosmos DB
 
 ## 🙋‍♀️ Author
 
-**Nisha**  
+**Nisha S**  
 Azure Data Engineer | Passionate about building scalable data pipelines and optimizing data workflows.
 
 📫 [LinkedIn Profile](https://www.linkedin.com/in/nisha-s-16410917a/)
