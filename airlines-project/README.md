@@ -31,8 +31,9 @@ ADLS (raw daily flights files)
     If Exists? ──▶ Data Flow (join transformation) ──▶ ADLS (processed output)
          │
          └─▶ End (no new data)
+```
 
-## Linked Services
+## 🔗 Linked Services
 
 - Connect to **ADLS Gen2**
 
