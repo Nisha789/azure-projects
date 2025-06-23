@@ -119,8 +119,59 @@ ADLS (raw daily flights files)
 
 ## ✅ Key Highlights
 
-- ✅ Incremental processing using `GetMetadata` → `If Condition`  
-- ✅ Schema-agnostic transformation via ADF **Data Flows**  
-- ✅ Fully automated CI/CD: ADF → ARM → Azure DevOps  
+- ✅ **Incremental processing** using `GetMetadata` → `If Condition`  
+- ✅ **Schema-agnostic transformation** via ADF **Data Flows**  
+- ✅ **Fully automated CI/CD:** ADF → ARM → Azure DevOps  
 - ✅ Infrastructure as Code (IaC) using **ARM templates**  
-- ✅ Hybrid agents for flexibility across dev/test/prod environments  
+- ✅ **Hybrid agents** for flexibility across dev/test/prod environments  
+
+## 📁 Repo Structure
+/
+└── airlines_cicd/
+    ├── dataflow/
+    │   └─ AirlineDataTransformation.json         ← ADF Data Flow definition
+    ├── dataset/
+    │   ├─ AirportDimData.json
+    │   ├─ DailyFlightsData.json
+    │   └─ ProcessedData_DS.json                 ← Dataset configs
+    ├── factory/
+    │   └─ airlinesadfdev.json                   ← ADF Factory metadata
+    ├── linkedService/
+    │   └─ ADLS_LS.json                          ← ADLS linked service
+    ├── pipeline/
+    │   ├─ airlinePipeline.json
+    │   ├─ NewDemoPipeline.json
+    │   └─ WaitPipeline.json
+    ├── airlinesadfdev/                          ← ARM artifacts published
+    │   ├─ ARMTemplateForFactory.json
+    │   └─ ARMTemplateParametersForFactory.json
+    └── README.md                                ← (this file)
+
+## 📌 Future Improvements
+
+- Add **parameterized scheduling** for dynamic file arrival windows  
+- Implement **unit tests** for Data Flow logic using custom datasets  
+- Extend to **multi-environment CI/CD** (dev/test/prod branches)  
+- Introduce **logging & alerting** for pipeline failures or high latency  
+
+---
+
+## ✅ Getting Started
+
+1. **Clone** the repository  
+2. Link **Azure Data Factory UI** to Azure DevOps repo  
+3. **Publish** from ADF → generates `adf_publish` branch with ARM code  
+4. Configure **Azure DevOps Release pipeline**:  
+   - Connect artifact (from Git repo)  
+   - Add ARM deployment task  
+5. **Push** code → Release pipeline auto-deploys ADF  
+6. Trigger pipeline run manually or on schedule in Azure  
+
+---
+
+## 📚 References
+
+- [Azure Data Factory Documentation: Data Flow & GetMetadata](https://learn.microsoft.com/en-us/azure/data-factory/introduction)  
+- [ARM Templates for ADF Deployment](https://learn.microsoft.com/en-us/azure/data-factory/continuous-integration-deployment)  
+- [Azure DevOps Release Pipelines with ARM Templates](https://learn.microsoft.com/en-us/azure/devops/pipelines/release/artifacts)  
+
