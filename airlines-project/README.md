@@ -126,6 +126,7 @@ ADLS (raw daily flights files)
 - ✅ **Hybrid agents** for flexibility across dev/test/prod environments  
 
 ## 📁 Repo Structure
+```
 /
 └── airlines_cicd/
     ├── dataflow/
@@ -146,6 +147,7 @@ ADLS (raw daily flights files)
     │   ├─ ARMTemplateForFactory.json
     │   └─ ARMTemplateParametersForFactory.json
     └── README.md                                ← (this file)
+```
 
 ## 📌 Future Improvements
 
@@ -175,3 +177,26 @@ ADLS (raw daily flights files)
 - [ARM Templates for ADF Deployment](https://learn.microsoft.com/en-us/azure/data-factory/continuous-integration-deployment)  
 - [Azure DevOps Release Pipelines with ARM Templates](https://learn.microsoft.com/en-us/azure/devops/pipelines/release/artifacts)  
 
+## 🤝 Contributions
+
+Contributions are welcome!  
+If you'd like to contribute, please **fork** the repository and submit a **pull request** with your enhancements.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](./LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+Special thanks to:
+
+- **Microsoft Azure** – for providing a comprehensive cloud platform including Data Factory, ADLS, and DevOps services.  
+- **Azure Data Factory (ADF)** – for its powerful visual interface and scalable data integration capabilities.  
+- **Azure DevOps** – for enabling smooth CI/CD automation and version control integration.  
+- **ARM Templates** – for supporting infrastructure as code and repeatable deployments.  
+
+Grateful for the rich documentation, tutorials, and community support that helped shape and complete this project successfully.
