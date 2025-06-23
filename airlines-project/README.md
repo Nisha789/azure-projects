@@ -32,7 +32,7 @@ ADLS (raw daily flights files)
          │
          └─▶ End (no new data)
 
-## 🔗 Linked Services
+## Linked Services
 
 - Connect to **ADLS Gen2**
 
