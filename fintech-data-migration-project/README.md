@@ -96,22 +96,6 @@ This project demonstrates a **modern data lakehouse approach**, following the **
 - CI/CD automation using Azure DevOps pipelines  
 
 ---
-
-## 📂 Repository Structure (Suggested)
-
-fintech-sql-data-migration/
-├── notebooks/
-│ ├── bronze_to_silver.ipynb
-│ ├── silver_to_gold.ipynb
-├── pipelines/
-│ └── synapse_pipeline.json
-├── sql/
-│ └── create_tables.sql
-├── README.md
-└── LICENSE
-
-
----
 ## 📂 Repository Link
 
 🔗 [GitHub Repository](https://github.com/Nisha789/azure-projects/tree/main/fintech-data-migration-project)
