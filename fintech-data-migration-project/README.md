@@ -95,19 +95,16 @@ This project demonstrates a **modern data lakehouse approach**, following the **
 - Parameterization to make table list and paths fully dynamic  
 - CI/CD automation using Azure DevOps pipelines  
 
----
 ## 📂 Repository Link
 
 🔗 [GitHub Repository](https://github.com/Nisha789/azure-projects/tree/main/fintech-data-migration-project)
 
 
----
 ## 🤝 Contributions
 
 Contributions are welcome!  
 If you'd like to contribute, please **fork** the repository and submit a **pull request** with your enhancements.
 
----
 
 ## 📄 License
 
