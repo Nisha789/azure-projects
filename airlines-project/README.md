@@ -3,13 +3,13 @@
 **Author**: Nisha S  
 **Date**: February 2025  
 
----
+<!-- --- -->
 
 ## 🎯 Project Overview
 
 An Azure-based data engineering solution that incrementally ingests and transforms daily airlines flight data. Built using Azure Data Factory (ADF) and Azure DevOps CI/CD pipelines, the solution automatically processes new data files, enriches them with airport metadata, and writes the results to Azure Data Lake Store (ADLS).
 
----
+<!-- --- -->
 
 ## 🔧 Tech Stack
 
@@ -20,7 +20,7 @@ An Azure-based data engineering solution that incrementally ingests and transfor
 | Azure DevOps      | Git repo, CI/CD pipelines, release triggers           |
 | ARM Templates     | Infrastructure as Code for ADF factory deployment     |
 
----
+<!-- --- -->
 
 ## 🧩 Pipeline Architecture
 
@@ -37,7 +37,7 @@ ADLS (raw daily flights files)
 
 - Connect to **ADLS Gen2**
 
----
+<!-- --- -->
 
 ## 📊 Datasets
 
@@ -45,7 +45,7 @@ ADLS (raw daily flights files)
 - **DailyFlightsData** – New/daily flight CSV/JSON files  
 - **ProcessedData** – Sink for enriched output results  
 
----
+<!-- --- -->
 
 ## 🧪 Pipeline: `airPipeline`
 
@@ -69,7 +69,7 @@ ADLS (raw daily flights files)
     - `ArrCity`, `ArrState`, `ArrAirportName`  
   - Writes: To `ProcessedData`  
 
----
+<!-- --- -->
 
 ## 🛠️ CI/CD Implementation (Azure DevOps)
 
@@ -105,7 +105,7 @@ ADLS (raw daily flights files)
 - Enabled "Continuous deployment trigger"  
 - Automatically deploys to Prod on `adf_publish` commit  
 
----
+<!-- --- -->
 
 ## 🚀 How to Use
 
@@ -115,7 +115,7 @@ ADLS (raw daily flights files)
 4. DevOps release is triggered → Deploys updated ADF  
 5. ADF pipeline runs (manual/scheduled) → Writes enriched output to ADLS  
 
----
+<!-- --- -->
 
 ## ✅ Key Highlights
 
@@ -156,7 +156,7 @@ ADLS (raw daily flights files)
 - Extend to **multi-environment CI/CD** (dev/test/prod branches)  
 - Introduce **logging & alerting** for pipeline failures or high latency  
 
----
+<!-- --- -->
 
 ## ✅ Getting Started
 
@@ -169,7 +169,7 @@ ADLS (raw daily flights files)
 5. **Push** code → Release pipeline auto-deploys ADF  
 6. Trigger pipeline run manually or on schedule in Azure  
 
----
+<!-- --- -->
 
 ## 📚 References
 
@@ -182,13 +182,13 @@ ADLS (raw daily flights files)
 Contributions are welcome!  
 If you'd like to contribute, please **fork** the repository and submit a **pull request** with your enhancements.
 
----
+<!-- --- -->
 
 ## 📄 License
 
 This project is licensed under the **MIT License** – see the [LICENSE](./LICENSE) file for details.
 
----
+<!-- --- -->
 
 ## 🙏 Acknowledgments
 

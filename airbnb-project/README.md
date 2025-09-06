@@ -5,7 +5,7 @@
 
 The **AirBnB CDC Ingestion Pipeline** is designed to efficiently ingest, transform, and aggregate data from two sources: **Customer** and **Bookings**. This pipeline leverages Azure's **data engineering ecosystem**, including **Azure Data Lake Storage (ADLS)**, **Cosmos DB**, **Azure Data Factory (ADF)**, and **Azure Synapse Analytics**, to ensure real-time and batch processing of booking data.
 
----
+<!-- --- -->
 
 ## 🛠️ Tools and Technologies
 
@@ -16,7 +16,7 @@ The **AirBnB CDC Ingestion Pipeline** is designed to efficiently ingest, transfo
 - **Python** – Mock booking data generation
 - **SQL** – Data transformation, aggregation, and stored procedures
 
----
+<!-- --- -->
 
 ## 🚀 Architecture Overview
 
@@ -55,7 +55,7 @@ The **AirBnB CDC Ingestion Pipeline** is designed to efficiently ingest, transfo
 
 ```
 
----
+<!-- --- -->
 
 ## 📊 Data Flow
 
@@ -79,7 +79,7 @@ The **AirBnB CDC Ingestion Pipeline** is designed to efficiently ingest, transfo
   - Last booking date per country
 - This is done by joining the **bookings_fact** table with the **customer_dim** table and creating the **BookingCustomerAggregation** table in **Synapse**.
 
----
+<!-- --- -->
 
 ## 🧮 Data Transformation & Aggregation
 
@@ -135,7 +135,7 @@ The stored procedure is executed using:
 EXEC airbnb.BookingAggregation;
 ```
 
----
+<!-- --- -->
 
 ## ⚙️ Project Workflow
 
@@ -163,7 +163,7 @@ Run the stored procedure to refresh the **BookingCustomerAggregation** table in 
 EXEC airbnb.BookingAggregation;
 ```
 
----
+<!-- --- -->
 
 ## 🧠 Key Optimizations & Tuning
 
@@ -179,7 +179,7 @@ EXEC airbnb.BookingAggregation;
 4. **Data Archiving**: 
    - Archiving the raw data after ingestion ensures optimized storage management, reducing the costs of long-term storage and improving the pipeline's overall performance.
 
----
+<!-- --- -->
 
 ## 🔄 Future Enhancements
 
@@ -187,7 +187,7 @@ EXEC airbnb.BookingAggregation;
 - **Real-time Streaming**: Migrate the pipeline to incorporate **Azure Stream Analytics** or **Azure Synapse Link for Cosmos DB** for real-time streaming of both **customer** and **booking data**.
 - **Error Handling**: Implement advanced **error handling** and **logging** mechanisms in **ADF pipelines** to ensure smooth execution.
 
----
+<!-- --- -->
 
 ## Contributions
 Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request with your enhancements.

@@ -6,7 +6,7 @@ The **BookMyShow Real-Time Ticket Streaming** project demonstrates how to proces
 
 This pipeline simulates high-volume ticketing events (bookings & payments) flowing into an Event Hub, transforms and correlates them in Stream Analytics, and then stores the enriched data in a Synapse Data Warehouse for downstream reporting and analytics.
 
----
+<!-- --- -->
 
 ## 🛠️ Tools and Technologies
 
@@ -16,7 +16,7 @@ This pipeline simulates high-volume ticketing events (bookings & payments) flowi
 - **Python** – Event generation (simulated bookings and payments)
 - **SQL** – Stream Analytics query logic for data transformation and joining
 
----
+<!-- --- -->
 
 ## 🚀 Architecture Overview
 
@@ -41,7 +41,7 @@ This pipeline simulates high-volume ticketing events (bookings & payments) flowi
                    (Consolidated Fact Table)
 ```
 
----
+<!-- --- -->
 
 ## 📊 Data Flow
 
@@ -64,7 +64,7 @@ This pipeline simulates high-volume ticketing events (bookings & payments) flowi
 - Transformed and joined data is persisted into **Synapse Analytics**.
 - This data serves as the **single source of truth** for reporting (e.g., bookings per category, peak booking hours, payment methods used).
 
----
+<!-- --- -->
 
 ## ⚙️ Project Workflow
 
@@ -84,7 +84,7 @@ This pipeline simulates high-volume ticketing events (bookings & payments) flowi
 3. **Monitor Data in Synapse**  
    - Query the consolidated table to analyze booking & payment trends.
 
----
+<!-- --- -->
 
 ## 🧠 Key Features & Optimizations
 
@@ -93,7 +93,7 @@ This pipeline simulates high-volume ticketing events (bookings & payments) flowi
 - **Scalability** – Designed using Azure native, horizontally scalable components.
 - **Real-Time Analytics** – Near-real-time visibility into sales, peak hours, and payment preferences.
 
----
+<!-- --- -->
 
 ## 🔄 Future Enhancements
 
@@ -101,20 +101,20 @@ This pipeline simulates high-volume ticketing events (bookings & payments) flowi
 - **Fraud Detection** rules based on unusual payment behavior.
 - **Event Replay** for testing pipeline resilience under high load.
 
----
+<!-- --- -->
 
 ## 📂 Repository Link
 
 🔗 [GitHub Repository](https://github.com/Nisha789/azure-projects/tree/main/bookmyshow-project)
 
 
----
+<!-- --- -->
 ## 🤝 Contributions
 
 Contributions are welcome!  
 If you'd like to contribute, please **fork** the repository and submit a **pull request** with your enhancements.
 
----
+<!-- --- -->
 
 ## 📄 License
 
@@ -126,7 +126,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](./LICEN
 - [Azure Synapse Analytics Documentation](https://learn.microsoft.com/azure/synapse-analytics/)
 - [Python SDK for Azure](https://learn.microsoft.com/azure/developer/python/)
 
----
+<!-- --- -->
 
 ## 🙏 Acknowledgments
 Special thanks to:
@@ -134,7 +134,7 @@ Special thanks to:
 - The open-source community for Python and SQL libraries used in simulating and processing streaming data.
 - Inspiration from large-scale ticketing platforms for real-world use case modeling.
 
----
+<!-- --- -->
 
 ## 🙋‍♀️ Author
 

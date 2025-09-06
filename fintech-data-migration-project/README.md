@@ -5,7 +5,7 @@ The **Fintech SQL Data Migration Pipeline** is designed to extract financial dat
 
 This project demonstrates a **modern data lakehouse approach**, following the **Bronze → Silver → Gold** architecture for reliability, scalability, and performance.
 
----
+<!-- --- -->
 
 ## 🛠️ Tools and Technologies
 
@@ -17,7 +17,7 @@ This project demonstrates a **modern data lakehouse approach**, following the **
 - Azure Notifications – Email alerts for pipeline success or failure  
 - SQL – Schema creation and downstream analytical queries  
 
----
+<!-- --- -->
 
 ## 🚀 Architecture Overview
 ```plaintext
@@ -43,7 +43,7 @@ This project demonstrates a **modern data lakehouse approach**, following the **
       └────────────────────────────┘
 ```
 
----
+<!-- --- -->
 
 ## 📊 Data Flow Steps
 
@@ -67,7 +67,7 @@ This project demonstrates a **modern data lakehouse approach**, following the **
 - Success and failure events trigger email notifications  
 - Provides operational visibility for data engineers  
 
----
+<!-- --- -->
 
 ## ⚙️ Project Workflow
 
@@ -77,7 +77,7 @@ This project demonstrates a **modern data lakehouse approach**, following the **
 4. Run PySpark Notebooks: Bronze → Silver for cleaning, Silver → Gold for modeling  
 5. Verify Output: Confirm curated data in the gold container ready for analytics  
 
----
+<!-- --- -->
 
 ## 🧠 Key Optimizations & Design Decisions
 
@@ -86,7 +86,7 @@ This project demonstrates a **modern data lakehouse approach**, following the **
 - Modular notebooks allow each dataset to be transformed independently  
 - Scalable Synapse pipeline pattern can easily extend to more datasets  
 
----
+<!-- --- -->
 
 ## 🔮 Future Enhancements
 
@@ -118,15 +118,12 @@ This project is licensed under the **MIT License** – see the [LICENSE](./LICEN
 - [Delta Lake Documentation](https://delta.io/)  
 - [Azure SQL Database Documentation](https://learn.microsoft.com/en-us/azure/azure-sql/)
 
----
-
 ## 🙏 Acknowledgments
 
 - Special thanks to the **Azure team** for providing services like **Synapse Analytics**, **Data Lake Storage**, and **Azure SQL Database**.  
 - Thanks to the **open-source community** for PySpark and Delta Lake, which make large-scale data transformation efficient.  
 - Inspired by modern **data lakehouse architecture patterns** for designing scalable ETL pipelines.
 
----
 
 ## 🙋‍♀️ Author
 
